@@ -1,0 +1,161 @@
+@import 'Var';
+
+.DiscordUserParent {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    padding: 7px;
+    border-radius: 8px;
+    background-color: var(--secondaryColor);
+
+    transition: box-shadow 250ms;
+
+    &:hover {
+
+        transition: box-shadow 250ms;
+        box-shadow: 0px 0px 5px 3px black, 0 0 6px 5px #c86dec
+
+    }
+}
+
+.Avatar {
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+.CircleMask {
+    clip-path: circle(50% at 50% 50%);
+}
+.CircleMask > img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.pcoolbg {
+    color: rgb(235, 235, 235);
+    word-break: break-word;
+    margin-right: 32px;
+    background: #f0f8ff2e;
+    border-radius: 6px;
+    padding: 0 10px;
+    margin-bottom: 0;
+}
+.avatarParent {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+}
+.AvatarText {
+    font-size: large;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+.AvatarTextBio {
+    font-size: large;
+    justify-content: center;
+    margin-bottom: 0px;
+    width: 100%;
+}
+.DiscordUser {
+    background-color: #ffffff11;
+    border-radius: 5px;
+    padding: 7px;
+    padding-right: 10px;
+    width: auto;
+    /*min-width: 200px;*/
+    transition: transform .3s ease;
+    margin-bottom: 10px;
+}
+@media only screen and (min-width: 600px) {
+
+    .DiscordUser:hover {
+        transform: scale(1.1);
+        /* margin :  0 10.2rem 20.2rem; */
+        transition: transform .3s ease;
+    }
+    .DiscordUserParent{
+        /*margin-bottom: 10px;*/
+    }
+
+}
+
+
+.DiscordUser:not(:last-child) {
+    /* margin-bottom: 10px; */
+}
+@media only screen and (max-width: 600px) {
+
+    .DiscordUser:hover {
+        transform: scale(1.05);
+        /*margin : 1.05rem;*/
+        transition: transform .3s ease;
+    }
+    .DiscordUserParent {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+.UserBand {
+    width:   100%;
+    margin-bottom:50px;
+    margin-top:10px;
+    min-height:200px;
+    //background: rgba($--background-color-sec,.25);
+    background: $--background-color-sec;
+    flex-flow: wrap;
+    display:flex;
+    border-Radius: 10px;
+    z-index: 323;
+    backdrop-filter: blur(24px);
+    //border: solid 2px transparent;
+    //background-clip: padding-box;
+    &.small {
+        height: auto;
+        flex-flow: column-reverse;
+
+        & .avatarParent {
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+        }
+    }
+    & .avatarParent {
+        justify-content: initial;
+        align-self: baseline;
+    }
+    & .AvatarText {
+        font-size: xxx-large;
+        align-self: baseline;
+        text-align: left;
+    }
+
+}
+.UserBandsm {
+    @extend .UserBand;
+    min-height: 50px;
+
+    & .avatarParent {
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .UserBand {
+        height:auto;
+        flex-flow: column;
+    }
+    .UserBand .avatarParent {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+    .UserBand > .AvatarText {
+        font-size: xxx-large;
+        align-self: baseline;
+        text-align: center;
+    }
+}

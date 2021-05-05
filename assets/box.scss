@@ -1,0 +1,39 @@
+@import 'Var';
+
+.Box {
+    background: scale-color($--background-color,$lightness: +2%);
+    margin: 20px 10px;
+    width: 50px;
+    height: 200px;
+    border-radius: 10px;
+    border-color: $--color-primary;
+    padding:10px;
+
+    transition: box-shadow 550ms;
+    &:hover {
+        transition: box-shadow 250ms;
+        /*box-shadow: inset 0px 0px 0px 3px var(--primaryColor), 0 0 1px 3px #0d73d4;*/
+        box-shadow: 0px 0px 5px 3px $--background-color, 0 0 6px 5px $--color-primary;
+
+    }
+}
+
+
+.Box.Image {
+    background-size: cover;
+    position:relative;
+    > div {
+        width:100%;
+        z-index: 5;
+        overflow-y:auto;
+        min-height: 23%;
+        max-height: 100%;
+        border-radius: 8px;
+        position: absolute ;
+        backdrop-filter: saturate(180%)  blur(30px);
+        left:0;
+        color: white;
+        mix-blend-mode: difference ;
+        bottom:0
+    }
+}

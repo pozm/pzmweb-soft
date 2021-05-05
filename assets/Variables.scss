@@ -1,0 +1,84 @@
+@import 'Var';
+
+@import '~element-ui/packages/theme-chalk/src/index';
+
+@import '../node_modules/perfect-scrollbar/css/perfect-scrollbar.css';
+
+@import '../node_modules/vuesax/dist/vuesax.css';
+
+@import '../node_modules/vue-simple-context-menu/dist/vue-simple-context-menu.css';
+
+@function toColorList($colour) {
+    @return red($colour), green($colour),blue($colour)
+}
+
+:root {
+    --vs-primary: #{toColorList($--color-primary)};
+    --vs-success: #{toColorList($--color-success)};
+    --vs-warn: #{toColorList($--color-warning)};
+    --vs-danger: #{toColorList($--color-danger)};
+    --vs-dark: #{toColorList($--background-color-base)};
+    --vs-text: #{toColorList($--color-text-regular)};
+    --vs-gray: #{toColorList($--background-color-sec)};
+    --vs-gray-2: #{toColorList($--background-color-sec)};
+    --vs-gray-3: #{toColorList( scale-color($--background-color-sec,$lightness:-10%))};
+    --vs-gray-4:#{toColorList( scale-color($--background-color-sec,$lightness:15%))};
+}
+
+
+$--rail:scale-color($--background-color,$lightness:-15%);
+$--bar:scale-color($--background-color-sec,$lightness:+15%);
+$--bar2:scale-color($--background-color-sec,$lightness:+17%);
+.ps .ps__rail-x:hover,
+.ps .ps__rail-y:hover,
+.ps .ps__rail-x:focus,
+.ps .ps__rail-y:focus,
+.ps .ps__rail-x.ps--clicking,
+.ps .ps__rail-y.ps--clicking {
+    //background-color: $--rail;
+    background-color: rgba(0,0,0,0);
+    opacity: 0.9;
+
+}
+.ps__thumb-x {
+
+    background-color: $--bar;
+
+}
+.ps__thumb-y {
+
+    background-color: $--bar;
+
+}
+.ps__rail-x:hover > .ps__thumb-x,
+.ps__rail-x:focus > .ps__thumb-x,
+.ps__rail-x.ps--clicking .ps__thumb-x {
+    background-color: $--bar2;
+}
+
+.ps__rail-y:hover > .ps__thumb-y,
+.ps__rail-y:focus > .ps__thumb-y,
+.ps__rail-y.ps--clicking .ps__thumb-y {
+    background-color: $--bar2;
+}
+
+.el-button {
+    border-radius: 8px;
+}
+.vue-simple-context-menu {
+    background-color: $--background-color-sec;
+    &--active {
+    }
+
+    &__item {
+      color:$--color-text-regular;
+      &:hover {
+        background-color: $--color-primary;
+        &.-delete {
+          background-color: $--color-danger;
+        }
+      }
+    }
+
+    &__divider {}
+  }

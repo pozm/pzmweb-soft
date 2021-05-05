@@ -1,0 +1,112 @@
+@import 'Var';
+
+span {
+    &.ADMIN {
+        background-clip:border-box;
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        color:#FF512F;
+        font-weight:700;
+        text-shadow:0 0 5px rgba(146, 146, 146, .7);
+        text-decoration: none;
+        background-image:linear-gradient(90deg, #ff0000 0%, #e600ff 100%,#fff);
+        animation:adminanim 5s infinite ease;
+    }
+    &.friend {
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        color: #d0792c;
+        font-weight: 700;
+        text-shadow: 0 0 8px rgb(203, 171, 150);
+        text-decoration: none;
+        animation:coolanim 5s infinite alternate ease;
+    }
+    &.mod {
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        color: #a7a7a7;
+        font-weight: 700;
+        text-shadow: 0 0 8px rgb(221, 221, 221);
+        text-decoration: none;
+        animation:coolanim2 5s infinite alternate ease;
+    }
+    &.x {
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        color: #d2bcd2;
+        font-weight: 700;
+        text-shadow: 0 0 8px rgb(227, 188, 227);
+        text-decoration: none;
+        animation:heart 5s infinite alternate ease;
+    }
+    &.user {
+        color: grey;
+    }
+}
+
+.bigTwo {
+    text-align: left;
+    margin: 20px 10px 30px 10px;
+    color: scale-color($--color-black,$lightness: -40%);
+    font-size: min(4vw,40px);
+    line-height: normal;
+}
+
+.bigOne {
+    text-align : left;
+    margin-Top: 100px;
+    font-Size: min(10vw,100px);
+    line-Height: normal;
+    color: $--color-black;
+}
+
+
+
+@keyframes adminanim{
+    from{
+        filter:hue-rotate(-360deg)
+    }
+    to{
+        filter:hue-rotate(360deg)
+    }
+}
+
+
+
+
+@keyframes coolanim{
+    from{
+        color: #d0792c;
+        text-shadow: 0 0 8px rgb(203, 171, 150);
+    }
+    to{
+        color: #d41919;
+        text-shadow: 0 0 8px rgb(203, 150, 150);
+    }
+}
+
+
+@keyframes coolanim2{
+    from{
+        color: #a7a7a7;
+        text-shadow: 0 0 8px rgb(221, 221, 221);
+    }
+    to{
+        color: #55c467;
+        text-shadow: 0 0 8px rgb(150, 203, 157);
+    }
+}
+
+
+
+@keyframes heart{
+    from{
+        color: #d2bcd2;
+        text-shadow: 0 0 8px rgb(227, 188, 227);
+    }
+    to{
+        color: #c055c4;
+        text-shadow: 0 0 8px rgb(199, 150, 203);
+    }
+}
+

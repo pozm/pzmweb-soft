@@ -1,0 +1,32 @@
+$--color-primary: #e83cc2;
+$--color-success: #89d7ac;
+$--color-warning: #f1d593;
+$--color-danger: #f38181;
+$--color-info: #8ccff3;
+$--background-color-base: #0C0E10 !default;
+$--color-white: #0C0E10 !default;
+$--color-black: #eeeeee !default;
+//
+//// text
+//
+
+$--background-color:$--color-white !default;
+$--background-color-sec:scale-color($--background-color,$lightness: +2%) !default;
+$--color-text-primary: #ffffff !default;
+$--color-text-regular: #EBEEF5 !default;
+$--color-text-secondary: #E4E7ED !default;
+$--color-text-placeholder: #DCDFE6 !default;
+$--color-text-sec:#67717F !default;
+
+$--color-text-dark: #212529 !default;
+
+//
+//// border
+//
+//
+$--border-color-base: #4a4a4c !default;
+$--border-color-light: #3a3a3d !default;
+$--border-color-lighter: #606266 !default;
+$--border-color-extra-light: #303133 !default;
+
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
